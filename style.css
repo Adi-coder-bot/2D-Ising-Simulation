@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+header{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    color: yellow;
+    font-size: 1.5vw;
+    z-index: 100;
+}
+header h1{
+    height: 80%;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header span{
+    height: 80%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 300ms ease, transform 300ms ease, cursor 300ms ease;
+}
+header span:hover{
+    color: yellowgreen;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.controls{
+    height: 30%;
+    width: 25%;
+    position: absolute;
+    top: 15%;
+    right: calc(10%/3);
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+.controls form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    z-index: 100;
+    border-radius: 0px 0px 20px 20px;
+}
+main{
+    height: 70%;
+    width: 100%;
+    background-color: black;
+    z-index: 50;
+}
+footer{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: yellow;
+    font-size: 1.5vw;
+    z-index: 100;
+}

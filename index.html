@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Ising Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>2D Ising Simulation</h1>
+        <span>Controls</span>
+        <div class="controls">
+            <form action="" method="get">
+                <div>
+                    <label for="temp">Temperature:</label>
+                    <input type="number" id="temp" step="any" min="0" value="0">
+                </div>
+                <div>
+                    <label for="material">Type of Material:</label>
+                    <select name="type" id="material">
+                        <option value="1" selected>Ferromagnetic</option>
+                        <option value="-1">Anti-Ferromagnetic</option>
+                        <option value="0">Paramagentic</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </header>
+    <main>
+        <canvas></canvas>
+    </main>
+    <footer>&copy; Aditya Jagendra Solanki | All Rights Reserved.</footer>
+    <script src="script.js"></script>
+</body>
+</html>
