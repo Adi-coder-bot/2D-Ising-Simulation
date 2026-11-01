@@ -99,6 +99,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
         lattice.push(row);
     }
 
+    CalcMag = ()=>{
+        let M = 0;
+        lattice.forEach(row => {
+            row.forEach(spin => {
+                M += spin;
+            });
+        });
+        return M;
+    };
+
     DrawSpins = ()=>{
         let yval = 0;
         lattice.forEach(row => {
@@ -110,6 +120,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
             yval += arrowheight;
         });
     };
+    let display = document.querySelector("#display");
+    display.textContent = (CalcMag()/(nrows*ncolumns)).toFixed(2);
 
     DrawSpins();
     animate = ()=>{
@@ -127,6 +139,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 lattice[row][column] *= -1;
             }
         }
+        display = document.querySelector("#display");
+        display.textContent = `Magnetization: ${(CalcMag()/(nrows*ncolumns)).toFixed(2)}`;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         DrawSpins();
         requestAnimationFrame(animate);
